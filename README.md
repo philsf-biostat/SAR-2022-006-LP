@@ -2,7 +2,7 @@
 
 Objetivo
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Lourenço Peixoto (INTO, 2022)
 
 ## Análises realizadas
 
