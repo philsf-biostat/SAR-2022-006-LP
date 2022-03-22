@@ -28,6 +28,14 @@ Análise Estatística para Lourenço Peixoto (INTO, 2022)
 - [Visualização online][reportviz-v01]
 - [PDF][pdf-v01]
 
+## Análises associadas
+
+Esta análise é parte de um projeto maior e é suportada por outras análises, disponíveis abaixo.
+
+**Preparo da base de dados de estudo retrospectivo de complicações após revisão de artroplastia total de quadril em idosos**
+
+<https://github.com/philsf-biostat/SAR-2021-023-LP>
+
 ## Portfólio
 
 Esta análise está incluída no portfólio do consultor.
