@@ -1,5 +1,5 @@
 ---
-title: "Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ"
+title: "Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)"
 subtitle: 'DOCUMENTO: SAP-2022-006-LP-v01'
 author: '**De:** Felipe Figueiredo **Para:** Lourenço Peixoto'
 date: "2022-01-24"
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ**
+**Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)**
 
 **Histórico do documento**
 
@@ -69,9 +69,16 @@ kable(history)
 
 ## Objetivos
 
+Estimar o risco de complicações pós revisão de ATQ em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
+
 ## Hipóteses
 
+O risco ajustado de prevalência de complicações em idosos a partir de 70 anos é significantemente diferente do risco de pacientes abaixo de 70 anos.
+
 ## Desenho do estudo
+
+Caso-controle, com exposição definida como tendo 70 anos ou mais.
+O desfecho será definido na seção 4.1.
 
 # Dados
 
@@ -86,6 +93,9 @@ A base de dados original possuía
 variáveis coletadas de
 `r Nobs_orig`
 observações.
+
+A idade foi calculada entre a data de nascimento e a data de cirurgia, em anos completos, com precisão de calendário.
+O grupo de expostos foi definido por uma variável indicadora que é positiva quando o participante incluído tem 70 anos ou mais no dia da cirurgia.
 
 ## Tabela de dados analíticos
 
@@ -117,7 +127,17 @@ analytical_mockup %>%
 
 **Desfecho primário**
 
+Chance de complicação após revisão de ATQ em idosos.
+
 ## Covariáveis
+
+Planejamos usar as seguintes variáveis para ajuste da razão de chances entre os grupos exposto e não exposto:
+
+- Sexo
+- HAS
+- ASA
+- DM
+- Tabagismo
 
 # Métodos estatísticos
 
@@ -138,19 +158,14 @@ As distribuições das características dos participantes serão resumidas em ta
 
 ### Análise inferencial
 
-Todas as comparações entre os grupos serão avaliadas como análises univariadas.
-Variáveis contínuas serão comparadas entre os grupos com o
-teste t de grupos independentes com a correção de Welch.
-<!-- teste t pareado. -->
-<!-- teste de Wilcoxon. -->
-Diferenças nas distribuições de variáveis categóricas serão avaliadas com o teste
-exato de Fisher.
-<!-- qui-quadrado. -->
-<!-- McNemar. -->
-
-<!-- Todas as análises inferenciais serão realizadas com base nos modelos estatísticos (descritos na próxima seção). -->
+Todas as análises inferenciais serão realizadas com base nos modelos estatísticos (descritos na próxima seção).
 
 ### Modelagem estatística
+
+A razão de chances de complicações entre os grupos exposto e não exposto serão estimadas através com um modelo de regressão logística.
+A fim de avaliar o impacto das covariáveis na estimativa da OR, dois modelos serão utilizados: uma estimativa bruta (apenas entre o desfecho e a exposição) e outra estimativa ajustada que controla pelos outros fatores.
+
+<!-- O procedimento de modelagem será descrito no apêndice do relatório. -->
 
 ### Dados faltantes
 
@@ -201,9 +216,11 @@ Esta análise será realizada utilizando-se o software `R` versão 4.1.2.
 
 # Observações e limitações
 
+N/A
+
 # Referências
 
-- **SAR-2022-006-LP-v01** -- Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ
+- **SAR-2022-006-LP-v01** -- Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 - Zarin DA, et al. The ClinicalTrials.gov results database -- update and key issues. N Engl J Med 2011;364:852-60 (<https://doi.org/10.1056/NEJMsa1012065>).
 - Gamble C, et al. Guidelines for the Content of Statistical Analysis Plans in Clinical Trials. JAMA. 2017;318(23):2337–2343 (<https://doi.org/10.1001/jama.2017.18556>).
@@ -211,6 +228,14 @@ Esta análise será realizada utilizando-se o software `R` versão 4.1.2.
 # Apêndice
 
 Este documento foi elaborado seguindo recomendações de estrutura para Planos de Análise Estatística (Gamble, 2017) para maior transparência e clareza.
+
+## Análises associadas
+
+Esta análise é parte de um projeto maior e é suportada por outras análises, disponíveis abaixo.
+
+**Preparo da base de dados de estudo retrospectivo de complicações após revisão de artroplastia total de quadril em idosos**
+
+<https://github.com/philsf-biostat/SAR-2021-023-LP>
 
 ## Disponibilidade
 

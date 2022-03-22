@@ -34,6 +34,7 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   mutate(
     id = factor(id), # or as.character
+    outcome = factor(outcome, labels = c("Não", "Sim")),
     idade = floor(as.duration(data_de_nascimento %--% dia_da_cirurgia)/dyears(1)),
     group = factor(idade >= 70, labels = c("<70", "70+")),
     asa = factor(asa),
@@ -43,8 +44,14 @@ data.raw <- data.raw %>%
 
 data.raw <- data.raw %>%
   set_variable_labels(
-    group = "Study group",
-    outcome = "Study outcome",
+    group = "Exposição",
+    outcome = "Complicação (qualquer)",
+    idade = "Idade (anos)",
+    sexo = "Sexo",
+    has = "Hipertensão arterial sistêmica",
+    asa = "ASA",
+    dm = "Diabetes mellitus",
+    tabagismo = "Tabagismo",
   )
 
 # analytical dataset ------------------------------------------------------
