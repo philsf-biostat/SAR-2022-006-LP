@@ -78,6 +78,7 @@ O risco ajustado de prevalência de complicações em idosos a partir de 70 anos
 ## Desenho do estudo
 
 Caso-controle, com exposição definida como tendo 70 anos ou mais.
+O desfecho será definido na seção 4.1.
 
 # Dados
 
@@ -92,6 +93,9 @@ A base de dados original possuía
 variáveis coletadas de
 `r Nobs_orig`
 observações.
+
+A idade foi calculada entre a data de nascimento e a data de cirurgia, em anos completos, com precisão de calendário.
+O grupo de expostos foi definido por uma variável indicadora que é positiva quando o participante incluído tem 70 anos ou mais no dia da cirurgia.
 
 ## Tabela de dados analíticos
 
