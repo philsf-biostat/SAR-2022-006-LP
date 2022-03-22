@@ -5,13 +5,13 @@ library(tidyverse)
 library(readxl)
 # library(haven)
 # library(foreign)
-# library(lubridate)
+library(lubridate)
 # library(naniar)
 library(labelled)
 
 # data loading ------------------------------------------------------------
 set.seed(42)
-data.raw <- tibble(id=gl(2, 10), group = gl(2, 10), outcome = rnorm(20))
+data.raw <- read_csv("dataset/atq septuagenarios clean.csv")
 # data.raw <- read_excel("dataset/file.xlsx") %>%
 #   janitor::clean_names()
 
@@ -21,6 +21,10 @@ Nobs_orig <- data.raw %>% nrow
 # data cleaning -----------------------------------------------------------
 
 data.raw <- data.raw %>%
+  rename(
+    id = prontuario,
+    outcome = comp_qualquer,
+    ) %>%
   # select() %>%
   mutate() %>%
   filter()
@@ -30,6 +34,9 @@ data.raw <- data.raw %>%
 data.raw <- data.raw %>%
   mutate(
     id = factor(id), # or as.character
+    idade = floor(as.duration(data_de_nascimento %--% dia_da_cirurgia)/dyears(1)),
+    group = factor(idade >= 70, labels = c("<70", "70+")),
+    asa = factor(asa),
   )
 
 # labels ------------------------------------------------------------------
@@ -48,6 +55,12 @@ analytical <- data.raw %>%
     id,
     group,
     outcome,
+    idade,
+    sexo,
+    has,
+    asa,
+    dm,
+    tabagismo,
   )
 
 Nvar_final <- analytical %>% ncol
