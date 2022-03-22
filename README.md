@@ -8,7 +8,6 @@ Análise Estatística para Lourenço Peixoto (INTO, 2022)
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
 1. Modelagem estatística
 
 ## Documentos
