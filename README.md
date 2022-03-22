@@ -1,14 +1,13 @@
-# título
+# Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ
 
-Objetivo
+Estimar o risco de qualquer complicação pós-cirúrgica em idosos a partir de 70 anos que realizaram ATQ no período 2016 -- 2019.
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Lourenço Peixoto (INTO, 2022)
 
 ## Análises realizadas
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
 1. Modelagem estatística
 
 ## Documentos

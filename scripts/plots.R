@@ -1,5 +1,4 @@
 # setup -------------------------------------------------------------------
-# library(ggplot2)
 # library(survminer)
 
 ff.col <- "steelblue" # good for single groups scale fill/color brewer
@@ -14,8 +13,7 @@ gg <- analytical %>%
 
 # plots -------------------------------------------------------------------
 
-# gg.outcome <-
-  gg +
+gg.outcome <- gg +
   geom_density(aes(outcome, fill = group), alpha = .8) +
   xlab(attr(analytical$outcome, "label")) +
   ylab("")
