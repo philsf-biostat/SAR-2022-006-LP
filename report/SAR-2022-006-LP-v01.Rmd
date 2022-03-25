@@ -80,6 +80,22 @@ Esta análise foi realizada utilizando-se o software `R` versão `r getRversion(
 
 ## População do estudo e acompanhamento
 
+Foram incluídos `r Nobs_final` participantes no estudo, com
+idade média (DP) `r inline_text(tab_desc, variable = idade)`.
+`r inline_text(tab_desc, variable = sexo, level = "M")` dos participantes incluídos eram homens (Tabela 1).
+
+Das comorbidades avaliadas
+`r inline_text(tab_desc, variable = has)` possuiam HAS,
+`r inline_text(tab_desc, variable = dm)` possuíam Diabetes mellitus e
+`r inline_text(tab_desc, variable = tabagismo)` eram tabagistas (Tabela 1).
+O nível de risco cirúrgico (ASA) mais frequente na população de estudo foi ASA 2 com
+`r inline_text(tab_desc, variable = asa, level = "2")` dos participantes incluídos.
+
+Este estudo considerou a faixa etária de 70 anos ou mais como fator de risco para complicações pós ATQ.
+`r inline_text(tab_desc, variable = group, level = "70+")` eram do grupo de risco de complicações.
+A taxa de complicações observada no período do estudo foi relativamente baixa com apenas
+`r inline_text(tab_desc, variable = outcome, level = "Sim")` participantes experimentando algum tipo de complicação.
+
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
