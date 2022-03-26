@@ -95,6 +95,7 @@ Este estudo considerou a faixa etária de 70 anos ou mais como fator de risco pa
 `r inline_text(tab_desc, variable = group, level = "70+")` eram do grupo de risco de complicações.
 A taxa de complicações observada no período do estudo foi relativamente baixa com apenas
 `r inline_text(tab_desc, variable = outcome, level = "Sim")` participantes experimentando algum tipo de complicação.
+Dos 84 participantes que não experimentaram complicações 31 (36.9%) eram do grupo de risco, enquanto que este grupo totalizou 201 (23.9%) dos casos livres de complicação (Tabela 1, Figura 1).
 
 ```{r tab_desc}
 tab_desc %>%
