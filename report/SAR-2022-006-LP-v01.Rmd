@@ -129,7 +129,7 @@ maior que a prevalência no grupo sem exposição.
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 2** Prevalência de complicações em idosos com 70 anos ou mais, ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
   )
 ```
 
