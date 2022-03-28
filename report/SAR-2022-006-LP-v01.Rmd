@@ -109,14 +109,37 @@ tab_desc %>%
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Análise inferencial
+## Prevalência de complicações
+
+```{r}
+est_crude <- coef(mod_crude)[2] %>% exp()
+est_adj <- coef(mod_full)[2] %>% exp()
+```
+
+O modelo logístico usado nesta análise é capaz de estimar a OR de complicação em idosos com 70 anos ou mais, comparado com o grupo com idades inferiores.
+
+Foi criado um modelo simplificado para servir como base de referência para interpretação do modelo final (Estimativa bruta, Tabela 2).
+A OR bruta entre o grupo sob exposição e o grupo sem exposição é
+`r format.float(est_crude)`,
+e esta OR significativamente acima de 1.
+Isto significa que, mesmo antes de ajustar pelos outros fatores, há evidência de risco aumentado de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente
+`r format.pct(est_crude-1, digits = 0)`
+maior que a prevalência no grupo sem exposição.
 
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** caption"
+    caption = "**Tabela 2** Prevalência de complicações em idosos com 70 anos ou mais. Estimativa crua e estimativa ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
   )
 ```
+
+Após ajustar a prevalência crua pelo sexo, ASA, e presença das comorbidades HAS, DM e hábitos tabagistas, a OR ajustada cresce para
+`r format.float(est_adj)` (Modelo Final, Tabela 2).
+Isto significa que, após controlar os outros fatores, há evidência de risco ainda maior de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente o dobro da prevalência
+(`r format.pct(est_adj-1, digits = 0)` maior)
+no grupo sem exposição.
 
 # Observações e limitações
 
@@ -133,6 +156,15 @@ tab_inf %>%
 ```{r A1, fig.cap="**Figura A1** Distribuição da idade na população do estudo."}
 # ![Age](../figures/distr_age.png)
 # knitr::include_graphics("../figures/distr_age.png", error = FALSE)
+```
+
+## Processo de modelagem
+
+```{r tab_inftab_inf_apx}
+tab_inf_apx %>%
+    as_kable(
+    caption = "**Tabela A1** Versão alternativa da tabela 2."
+  )
 ```
 
 ## Análises associadas
@@ -163,7 +195,7 @@ A tabela A1 mostra a estrutura  da tabela de dados analíticos.
 
 ```{r data}
 analytical_mockup %>%
-  pander(caption = "**Tabela A1** Estrutura da tabela de dados analíticos")
+  pander(caption = "**Tabela A2** Estrutura da tabela de dados analíticos")
 ```
 
 Os dados utilizados neste relatório não podem ser publicados online por questões de sigilo.

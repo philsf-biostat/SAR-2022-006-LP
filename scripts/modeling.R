@@ -19,7 +19,11 @@ mod_full %>% tidy
 mod_full %>% augment
 
 tab_inf <- tbl_merge(list(
+  mod_crude %>% tbl_regression(exp = TRUE, include = group),
+  mod_full %>% tbl_regression(exp = TRUE, include = group)
+), c("**Estimativa bruta**", "**Modelo final**"))
+
+tab_inf_apx <- tbl_merge(list(
   mod_crude %>% tbl_regression(exp = TRUE),
   mod_full %>% tbl_regression(exp = TRUE)
-))
-
+), c("**Estimativa bruta**", "**Modelo final**"))
