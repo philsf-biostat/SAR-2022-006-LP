@@ -150,6 +150,15 @@ tab_inf %>%
 # knitr::include_graphics("../figures/distr_age.png", error = FALSE)
 ```
 
+## Processo de modelagem
+
+```{r tab_inftab_inf_apx}
+tab_inf_apx %>%
+    as_kable(
+    caption = "**Tabela A1** Versão alternativa da tabela 2."
+  )
+```
+
 ## Análises associadas
 
 Esta análise é parte de um projeto maior e é suportada por outras análises, disponíveis abaixo.
@@ -178,7 +187,7 @@ A tabela A1 mostra a estrutura  da tabela de dados analíticos.
 
 ```{r data}
 analytical_mockup %>%
-  pander(caption = "**Tabela A1** Estrutura da tabela de dados analíticos")
+  pander(caption = "**Tabela A2** Estrutura da tabela de dados analíticos")
 ```
 
 Os dados utilizados neste relatório não podem ser publicados online por questões de sigilo.
