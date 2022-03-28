@@ -109,7 +109,7 @@ tab_desc %>%
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Análise inferencial
+## Prevalência de complicações
 
 ```{r tab_inf}
 tab_inf %>%
