@@ -113,6 +113,7 @@ knitr::include_graphics("../figures/outcome.png", error = FALSE)
 
 ```{r}
 est_crude <- coef(mod_crude)[2] %>% exp()
+est_adj <- coef(mod_full)[2] %>% exp()
 ```
 
 O modelo logístico usado nesta análise é capaz de estimar a OR de complicação em idosos com 70 anos ou mais, comparado com o grupo com idades inferiores.
@@ -129,9 +130,16 @@ maior que a prevalência no grupo sem exposição.
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** Prevalência de complicações em idosos com 70 anos ou mais, ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
+    caption = "**Tabela 2** Prevalência de complicações em idosos com 70 anos ou mais. Estimativa crua e estimativa ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
   )
 ```
+
+Após ajustar a prevalência crua pelo sexo, ASA, e presença das comorbidades HAS, DM e hábitos tabagistas, a OR ajustada cresce para
+`r format.float(est_adj)` (Modelo Final, Tabela 2).
+Isto significa que, após controlar os outros fatores, há evidência de risco ainda maior de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente o dobro
+(`r format.pct(est_adj-1, digits = 0)`)
+da prevalência no grupo sem exposição.
 
 # Observações e limitações
 
