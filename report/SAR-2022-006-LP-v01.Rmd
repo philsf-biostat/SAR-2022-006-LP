@@ -111,6 +111,21 @@ knitr::include_graphics("../figures/outcome.png", error = FALSE)
 
 ## Prevalência de complicações
 
+```{r}
+est_crude <- coef(mod_crude)[2] %>% exp()
+```
+
+O modelo logístico usado nesta análise é capaz de estimar a OR de complicação em idosos com 70 anos ou mais, comparado com o grupo com idades inferiores.
+
+Foi criado um modelo simplificado para servir como base de referência para interpretação do modelo final (Estimativa bruta, Tabela 2).
+A OR bruta entre o grupo sob exposição e o grupo sem exposição é
+`r format.float(est_crude)`,
+e esta OR significativamente acima de 1.
+Isto significa que, mesmo antes de ajustar pelos outros fatores, há evidência de risco aumentado de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente
+`r format.pct(est_crude-1, digits = 0)`
+maior que a prevalência no grupo sem exposição.
+
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
