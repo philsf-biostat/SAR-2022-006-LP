@@ -54,6 +54,11 @@ kable(history)
 
 # Lista de abreviaturas
 
+- DP: desvio padrão
+- IC: intervalo de confiança
+- OR: razão de chances (*odds ratio*)
+<!-- - IMC: índice de massa corpórea -->
+
 # Contexto
 
 ## Objetivos

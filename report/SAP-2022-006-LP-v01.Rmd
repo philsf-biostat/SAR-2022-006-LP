@@ -54,16 +54,10 @@ kable(history)
 
 # Lista de abreviaturas
 
-- d: tamanho de efeito D de Cohen
-- CV: coeficiente de variação
 - DP: desvio padrão
-- HR: razão de risco (*hazards ratio*)
 - IC: intervalo de confiança
-- IIQ: intervalo interquartílico
-- IMC: índice de massa corpórea
-- IRR: razão de taxas de incidência (*incidence rates ratio*)
 - OR: razão de chances (*odds ratio*)
-- RR: razão de riscos (*risks ratio*)
+<!-- - IMC: índice de massa corpórea -->
 
 # Contexto
 
