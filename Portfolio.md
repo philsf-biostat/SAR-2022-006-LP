@@ -12,16 +12,14 @@ tags:
   - prevalence
 ---
 
-Objetivo
+Estimar o risco de qualquer complicação após ATQ primária em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Lourenço Peixoto (INTO, 2022)
 
 ## Análises realizadas
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
-1. Imputação de dados faltantes
 1. Modelagem estatística
 
 ## Documentos
