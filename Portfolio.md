@@ -7,24 +7,9 @@ redirect_from:
   - /SAR-2022-006-LP/
 categories:
   - case-control
-  - cross-sectional
-  - longitudinal-studies
-  - cohort
-  - clinical-trial
-  - ecological
   - epidemiology
-  - bioassay
 tags:
   - prevalence
-  - incidence
-  - diagnostic-models
-  - prognostic-models
-  - survival-analysis
-  - efficacy
-  - concordance-analysis
-  - survey
-  - machine-learning
-  - unsupervised-learning
 ---
 
 Objetivo
