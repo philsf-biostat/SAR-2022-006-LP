@@ -36,6 +36,10 @@ Esta análise é parte de um projeto maior e é suportada por outras análises, 
 
 <https://github.com/philsf-biostat/SAR-2021-023-LP>
 
+**Prevalência de complicações específicas em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)**
+
+<https://philsf-biostat.github.io/SAR-2022-018-LP>
+
 ## Portfólio
 
 Esta análise está incluída no portfólio do consultor.
