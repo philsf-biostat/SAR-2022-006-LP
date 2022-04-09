@@ -1,5 +1,5 @@
 ---
-title: "Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)"
+title: "Plano Analítico para Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)"
 subtitle: 'DOCUMENTO: SAP-2022-006-LP-v01'
 author: '**De:** Felipe Figueiredo **Para:** Lourenço Peixoto'
 date: "2022-01-24"
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Plano Analítico para Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)**
+**Plano Analítico para Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)**
 
 **Histórico do documento**
 
@@ -54,22 +54,16 @@ kable(history)
 
 # Lista de abreviaturas
 
-- d: tamanho de efeito D de Cohen
-- CV: coeficiente de variação
 - DP: desvio padrão
-- HR: razão de risco (*hazards ratio*)
 - IC: intervalo de confiança
-- IIQ: intervalo interquartílico
-- IMC: índice de massa corpórea
-- IRR: razão de taxas de incidência (*incidence rates ratio*)
 - OR: razão de chances (*odds ratio*)
-- RR: razão de riscos (*risks ratio*)
+<!-- - IMC: índice de massa corpórea -->
 
 # Contexto
 
 ## Objetivos
 
-Estimar o risco de complicações pós revisão de ATQ em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
+Estimar o risco de complicações após ATQ primária em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
 
 ## Hipóteses
 
@@ -220,7 +214,7 @@ N/A
 
 # Referências
 
-- **SAR-2022-006-LP-v01** -- Prevalência de complicações em idosos após revisão de artroplastia total de quadril em hospital de referência no RJ (2016 -- 2019)
+- **SAR-2022-006-LP-v01** -- Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)
 <!-- - Cohen, J. (1988). Statistical power analysis for the behavioral sciences (2nd Ed.). New York: Routledge. -->
 - Zarin DA, et al. The ClinicalTrials.gov results database -- update and key issues. N Engl J Med 2011;364:852-60 (<https://doi.org/10.1056/NEJMsa1012065>).
 - Gamble C, et al. Guidelines for the Content of Statistical Analysis Plans in Clinical Trials. JAMA. 2017;318(23):2337–2343 (<https://doi.org/10.1001/jama.2017.18556>).

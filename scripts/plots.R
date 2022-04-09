@@ -14,9 +14,9 @@ gg <- analytical %>%
 # plots -------------------------------------------------------------------
 
 gg.outcome <- gg +
-  geom_bar(aes(outcome, fill = group), position = "fill") +
+  geom_bar(aes(group, fill = outcome), position = "fill") +
   scale_y_continuous(labels = scales::label_percent()) +
-  labs(fill = attr(analytical$idade, "label")) +
-  xlab(attr(analytical$outcome, "label")) +
+  labs(fill = attr(analytical$outcome, "label")) +
+  xlab(attr(analytical$idade, "label")) +
   ylab("")
 
