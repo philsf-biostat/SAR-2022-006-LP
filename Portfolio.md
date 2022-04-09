@@ -1,5 +1,5 @@
 ---
-title: '[title]'
+title: 'Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)'
 date: ""
 permalink: /portfolio/SAR-2022-006/
 redirect_from:
@@ -7,36 +7,19 @@ redirect_from:
   - /SAR-2022-006-LP/
 categories:
   - case-control
-  - cross-sectional
-  - longitudinal-studies
-  - cohort
-  - clinical-trial
-  - ecological
   - epidemiology
-  - bioassay
 tags:
   - prevalence
-  - incidence
-  - diagnostic-models
-  - prognostic-models
-  - survival-analysis
-  - efficacy
-  - concordance-analysis
-  - survey
-  - machine-learning
-  - unsupervised-learning
 ---
 
-Objetivo
+Estimar o risco de qualquer complicação após ATQ primária em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
 
-Análise Estatística para PESSOA (LOCAL, aaaa)
+Análise Estatística para Lourenço Peixoto (INTO, 2022)
 
 ## Análises realizadas
 
 1. Análise descritiva
 1. Análise inferencial
-1. Análise de poder
-1. Imputação de dados faltantes
 1. Modelagem estatística
 
 ## Documentos
@@ -49,15 +32,19 @@ Análise Estatística para PESSOA (LOCAL, aaaa)
 
 - [PDF][sar]
 
-<!-- ## Análises associadas -->
+## Análises associadas
 
-<!-- Esta análise é parte de um projeto maior e é suportada por outras análises, disponíveis abaixo. -->
+Esta análise é parte de um projeto maior e é suportada por outras análises, disponíveis abaixo.
 
-<!-- **[assoc_title]** -->
+**Preparo da base de dados de estudo retrospectivo de complicações após artroplastia total de quadril primária em idosos**
 
-<!-- <[assoc_link]> -->
+<https://github.com/philsf-biostat/SAR-2021-023-LP>
 
-<!-- --- -->
+**Prevalência de complicações específicas em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)**
+
+<https://philsf-biostat.github.io/SAR-2022-018-LP>
+
+---
 
 [sap]: /files/SAP-2022-006-LP-v01.pdf
 [sar]: /files/SAR-2022-006-LP-v01.pdf

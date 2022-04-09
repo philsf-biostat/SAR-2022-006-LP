@@ -1,5 +1,5 @@
 ---
-title: "Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)"
+title: "Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)"
 subtitle: 'DOCUMENTO: SAR-2022-006-LP-v01'
 author: '**De:** Felipe Figueiredo **Para:** Lourenço Peixoto'
 date: "2022-03-28"
@@ -37,7 +37,7 @@ panderOptions('table.split.table', 160)
 
 \newpage
 
-**Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)**
+**Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)**
 
 **Histórico do documento**
 
@@ -96,11 +96,11 @@ Das comorbidades avaliadas
 O nível de risco cirúrgico (ASA) mais frequente na população de estudo foi ASA 2 com
 `r inline_text(tab_desc, variable = asa, level = "2")` dos participantes incluídos.
 
-Este estudo considerou a faixa etária de 70 anos ou mais como fator de risco para complicações pós ATQ.
-`r inline_text(tab_desc, variable = group, level = "70+")` eram do grupo de risco de complicações.
-A taxa de complicações observada no período do estudo foi relativamente baixa com apenas
+Este estudo considerou a faixa etária de 70 anos ou mais como fator de risco para qualquer complicação pós ATQ.
+`r inline_text(tab_desc, variable = group, level = "70+")` eram do grupo de risco de qualquer complicação.
+A taxa de qualquer complicação observada no período do estudo foi relativamente baixa com apenas
 `r inline_text(tab_desc, variable = outcome, level = "Sim")` participantes experimentando algum tipo de complicação.
-Dos 84 participantes que não experimentaram complicações 31 (36.9%) eram do grupo de risco, enquanto que este grupo totalizou 201 (23.9%) dos casos livres de complicação (Tabela 1, Figura 1).
+Dos 84 participantes que não experimentaram qualquer complicação 31 (36.9%) eram do grupo de risco, enquanto que este grupo totalizou 201 (23.9%) dos casos livres de complicação (Tabela 1, Figura 1).
 
 ```{r tab_desc}
 tab_desc %>%
@@ -114,7 +114,7 @@ tab_desc %>%
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
 
-## Prevalência de complicações
+## Prevalência de qualquer complicação
 
 ```{r}
 est_crude <- coef(mod_crude)[2] %>% exp()
@@ -127,7 +127,7 @@ Foi criado um modelo simplificado para servir como base de referência para inte
 A OR bruta entre o grupo sob exposição e o grupo sem exposição é
 `r format.float(est_crude)`,
 e esta OR significativamente acima de 1.
-Isto significa que, mesmo antes de ajustar pelos outros fatores, há evidência de risco aumentado de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Isto significa que, mesmo antes de ajustar pelos outros fatores, há evidência de risco aumentado de ocorrência qualquer complicação após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
 Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente
 `r format.pct(est_crude-1, digits = 0)`
 maior que a prevalência no grupo sem exposição.
@@ -135,13 +135,13 @@ maior que a prevalência no grupo sem exposição.
 ```{r tab_inf}
 tab_inf %>%
     as_kable(
-    caption = "**Tabela 2** Prevalência de complicações em idosos com 70 anos ou mais. Estimativa crua e estimativa ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
+    caption = "**Tabela 2** Prevalência de qualquer complicação em idosos com 70 anos ou mais. Estimativa crua e estimativa ajustada por sexo, HAS, ASA, DM e hábitos tabagistas."
   )
 ```
 
 Após ajustar a prevalência crua pelo sexo, ASA, e presença das comorbidades HAS, DM e hábitos tabagistas, a OR ajustada cresce para
 `r format.float(est_adj)` (Modelo Final, Tabela 2).
-Isto significa que, após controlar os outros fatores, há evidência de risco ainda maior de ocorrência complicações após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
+Isto significa que, após controlar os outros fatores, há evidência de risco ainda maior de ocorrência qualquer complicação após revisão de ATQ neste grupo, quando comparado ao grupo sem exposição.
 Neste caso a estimativa de prevalência relativa no grupo com exposição é aproximadamente o dobro da prevalência
 (`r format.pct(est_adj-1, digits = 0)` maior)
 no grupo sem exposição.
@@ -152,7 +152,7 @@ no grupo sem exposição.
 
 # Referências
 
-- **SAP-2022-006-LP-v01** -- Plano Analítico para Prevalência de complicações em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)
+- **SAP-2022-006-LP-v01** -- Plano Analítico para Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)
 
 # Apêndice
 
