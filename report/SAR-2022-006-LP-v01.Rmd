@@ -152,11 +152,11 @@ Dos 84 participantes que não experimentaram qualquer complicação 31 (36.9%) e
 ```{r tab_desc}
 tab_desc %>%
     as_kable(
-    caption = "**Tabela 1** caption"
+    caption = "**Tabela 1** Características clínicas e demográficas dos participantes do estudo."
   )
 ```
 
-```{r fig1, fig.cap="**Figura 1** caption"}
+```{r fig1, fig.cap="**Figura 1** Taxas de complicações de acordo com exposição."}
 # ![Age](../figures/outcome.png)
 knitr::include_graphics("../figures/outcome.png", error = FALSE)
 ```
