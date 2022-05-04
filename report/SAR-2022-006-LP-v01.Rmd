@@ -50,6 +50,10 @@ colnames(history) <- c("Versão", "Alterações")
 kable(history)
 ```
 
+```{r results, include=FALSE}
+source("scripts/results.R", encoding = 'UTF-8')
+```
+
 ---
 
 # Lista de abreviaturas
@@ -63,22 +67,65 @@ kable(history)
 
 ## Objetivos
 
+Estimar o risco de qualquer complicação após ATQ primária em idosos a partir de 70 anos no período entre 2016 e 2019, quando comparados a pacientes mais novos.
+
 ## Recepção e tratamento dos dados
 
-# Metodologia
+A base de dados original possuía
+`r Nvar_orig`
+variáveis coletadas de
+`r Nobs_orig`
+observações.
+A idade foi calculada entre a data de nascimento e a data de cirurgia, em anos completos, com precisão de calendário.
+O grupo de expostos foi definido por uma variável indicadora que é positiva quando o participante incluído tem 70 anos ou mais no dia da cirurgia.
+O processamento de limpeza e manipulação de dados está descrito em relatório técnico, onde foi feita a identificação de complicações individuais e o agrupamento de complicações em um desfecho composto, usado nesta análise (**SAR-2021-023-LP-v01**).
+Depois dos procedimentos de limpeza e seleção
+`r Nvar_final`
+variáveis foram incluídas na análise com
+`r Nobs_final`
+observações.
 
-```{r results, include=FALSE}
-source("scripts/results.R", encoding = 'UTF-8')
-```
+# Metodologia
 
 ## Variáveis
 
 ### Desfechos primário e secundário
 
+O desfecho deste estudo será um desfecho composto, agrupando todas as complicações identificadas na base.
+Um estudo posterior investigará as prevalências de complicações individuais.
+
+**Desfecho primário**
+
+Chance de complicação após revisão de ATQ em idosos.
+
 ### Covariáveis
+
+Planejamos usar as seguintes variáveis para ajuste da razão de chances entre os grupos exposto e não exposto:
+
+- Sexo
+- HAS
+- ASA
+- DM
+- Tabagismo
 
 ## Análises Estatísticas
 
+O perfil epidemiológico dos participantes do estudo será descrito na baseline.
+As características demográficas
+(sexo, idade e IMC)
+e clínicas
+<!-- ( [vars] ) -->
+serão descritas como
+média (DP)
+<!-- mediana (IIQ) -->
+ou frequência e proporção (%), conforme apropriado.
+As distribuições das características dos participantes serão resumidas em tabelas e visualizadas em gráficos exploratórios
+A razão de chances de qualquer complicação entre os grupos exposto e não exposto serão estimadas através com um modelo de regressão logística.
+A fim de avaliar o impacto das covariáveis na estimativa da OR, dois modelos serão utilizados: uma estimativa bruta (apenas entre o desfecho e a exposição) e outra estimativa ajustada que controla pelos outros fatores.
+Todas as avaliações serão realizadas como análises de casos completos.
+Todas as análises serão realizadas ao nível de significância de 5%.
+Todos os testes de hipóteses e intervalos de confiança calculados serão
+bicaudais.
 Esta análise foi realizada utilizando-se o software `R` versão `r getRversion()`.
 
 # Resultados
@@ -148,11 +195,14 @@ no grupo sem exposição.
 
 # Observações e limitações
 
+N/A
+
 # Conclusões
 
 # Referências
 
 - **SAP-2022-006-LP-v01** -- Plano Analítico para Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)
+- **SAR-2021-023-LP-v01** -- Preparo da base de dados de estudo retrospectivo de complicações após revisão de artroplastia total de quadril em idosos
 
 # Apêndice
 
