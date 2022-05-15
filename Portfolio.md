@@ -1,6 +1,6 @@
 ---
 title: 'Prevalência de qualquer complicação em idosos após artroplastia total de quadril primária em hospital de referência no RJ (2016 -- 2019)'
-date: ""
+date: "2022-03-28"
 permalink: /portfolio/SAR-2022-006/
 redirect_from:
   - /portfolio/SAR-2022-006-LP/
